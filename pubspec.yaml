@@ -14,6 +14,9 @@ dependencies:
   # Riverpod
   flutter_riverpod: ^2.4.10
   riverpod_annotation: ^2.3.4
+  # Freezed
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
   # GoRouter
   go_router: 13.2.0
   # Firebase
@@ -33,6 +36,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   riverpod_generator: ^2.3.11
   riverpod_lint: ^2.3.9
+  # Freezed
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
   # GoRouter
   go_router_builder: ^2.4.1
 
