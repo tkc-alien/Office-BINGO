@@ -36,6 +36,9 @@ class AppColors {
   /// 背景（画面背景に配置するコンポーネント）
   static const componentBackground = Color(0xffffffff);
 
+  /// 背景（ダイアログ）
+  static const dialogBackground = componentBackground;
+
   /// 枠（画面背景に配置するコンポーネント）
   static const Color componentFrame = primarySwatch;
 

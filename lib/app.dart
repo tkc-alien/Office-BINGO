@@ -24,6 +24,9 @@ class App extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: AppButtonStyles.themeStyle,
         ),
+        dialogTheme: const DialogTheme(
+          backgroundColor: AppColors.dialogBackground,
+        ),
       ),
     );
   }
