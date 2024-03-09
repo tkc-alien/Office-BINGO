@@ -12,6 +12,8 @@ class UserEntity with _$UserEntity {
   const factory UserEntity({
     required String name,
     required String avatar,
+    required int sheetCount,
+    required int bingoCount,
   }) = _UserEntity;
 
   factory UserEntity.fromJson(Map<String, dynamic> json) => _$UserEntityFromJson(json);

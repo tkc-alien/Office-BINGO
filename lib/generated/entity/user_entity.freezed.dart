@@ -22,6 +22,8 @@ UserEntity _$UserEntityFromJson(Map<String, dynamic> json) {
 mixin _$UserEntity {
   String get name => throw _privateConstructorUsedError;
   String get avatar => throw _privateConstructorUsedError;
+  int get sheetCount => throw _privateConstructorUsedError;
+  int get bingoCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +37,7 @@ abstract class $UserEntityCopyWith<$Res> {
           UserEntity value, $Res Function(UserEntity) then) =
       _$UserEntityCopyWithImpl<$Res, UserEntity>;
   @useResult
-  $Res call({String name, String avatar});
+  $Res call({String name, String avatar, int sheetCount, int bingoCount});
 }
 
 /// @nodoc
@@ -53,6 +55,8 @@ class _$UserEntityCopyWithImpl<$Res, $Val extends UserEntity>
   $Res call({
     Object? name = null,
     Object? avatar = null,
+    Object? sheetCount = null,
+    Object? bingoCount = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -63,6 +67,14 @@ class _$UserEntityCopyWithImpl<$Res, $Val extends UserEntity>
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String,
+      sheetCount: null == sheetCount
+          ? _value.sheetCount
+          : sheetCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      bingoCount: null == bingoCount
+          ? _value.bingoCount
+          : bingoCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -75,7 +87,7 @@ abstract class _$$UserEntityImplCopyWith<$Res>
       __$$UserEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String avatar});
+  $Res call({String name, String avatar, int sheetCount, int bingoCount});
 }
 
 /// @nodoc
@@ -91,6 +103,8 @@ class __$$UserEntityImplCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? avatar = null,
+    Object? sheetCount = null,
+    Object? bingoCount = null,
   }) {
     return _then(_$UserEntityImpl(
       name: null == name
@@ -101,6 +115,14 @@ class __$$UserEntityImplCopyWithImpl<$Res>
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String,
+      sheetCount: null == sheetCount
+          ? _value.sheetCount
+          : sheetCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      bingoCount: null == bingoCount
+          ? _value.bingoCount
+          : bingoCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -109,7 +131,11 @@ class __$$UserEntityImplCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.none, explicitToJson: true)
 class _$UserEntityImpl implements _UserEntity {
-  const _$UserEntityImpl({required this.name, required this.avatar});
+  const _$UserEntityImpl(
+      {required this.name,
+      required this.avatar,
+      required this.sheetCount,
+      required this.bingoCount});
 
   factory _$UserEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserEntityImplFromJson(json);
@@ -118,10 +144,14 @@ class _$UserEntityImpl implements _UserEntity {
   final String name;
   @override
   final String avatar;
+  @override
+  final int sheetCount;
+  @override
+  final int bingoCount;
 
   @override
   String toString() {
-    return 'UserEntity(name: $name, avatar: $avatar)';
+    return 'UserEntity(name: $name, avatar: $avatar, sheetCount: $sheetCount, bingoCount: $bingoCount)';
   }
 
   @override
@@ -130,12 +160,17 @@ class _$UserEntityImpl implements _UserEntity {
         (other.runtimeType == runtimeType &&
             other is _$UserEntityImpl &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.avatar, avatar) || other.avatar == avatar));
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.sheetCount, sheetCount) ||
+                other.sheetCount == sheetCount) &&
+            (identical(other.bingoCount, bingoCount) ||
+                other.bingoCount == bingoCount));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, avatar);
+  int get hashCode =>
+      Object.hash(runtimeType, name, avatar, sheetCount, bingoCount);
 
   @JsonKey(ignore: true)
   @override
@@ -154,7 +189,9 @@ class _$UserEntityImpl implements _UserEntity {
 abstract class _UserEntity implements UserEntity {
   const factory _UserEntity(
       {required final String name,
-      required final String avatar}) = _$UserEntityImpl;
+      required final String avatar,
+      required final int sheetCount,
+      required final int bingoCount}) = _$UserEntityImpl;
 
   factory _UserEntity.fromJson(Map<String, dynamic> json) =
       _$UserEntityImpl.fromJson;
@@ -163,6 +200,10 @@ abstract class _UserEntity implements UserEntity {
   String get name;
   @override
   String get avatar;
+  @override
+  int get sheetCount;
+  @override
+  int get bingoCount;
   @override
   @JsonKey(ignore: true)
   _$$UserEntityImplCopyWith<_$UserEntityImpl> get copyWith =>
