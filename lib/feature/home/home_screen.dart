@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:office_bingo/common/component/shadowed_button.dart';
+import 'package:office_bingo/const/view/app_button_styles.dart';
 import 'package:office_bingo/feature/home/component/bingo_sheet_view.dart';
 import 'package:office_bingo/feature/home/component/current_user_view.dart';
 
@@ -15,7 +16,7 @@ class HomeScreen extends ConsumerWidget {
         top: true,
         bottom: false,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 16),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -26,30 +27,36 @@ class HomeScreen extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Expanded(child: CurrentUserView()),
-                    const Gap(20),
+                    const Gap(16),
                     ShadowedButton(
                       onPressed: () {},
+                      style: AppButtonStyles.elevatedPrimaryOnScaffold,
                       child: const Icon(Icons.settings),
                     ),
                   ],
                 ),
               ),
-              const BingoSheetView(),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16),
+                child: BingoSheetView(),
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   ShadowedButton(
                     onPressed: () {},
+                    style: AppButtonStyles.elevatedPrimaryOnScaffold,
                     child: const Text("抽選する"),
                   ),
-                  const Gap(12),
+                  const Gap(16),
                   Row(
                     children: [
                       Expanded(
                         flex: 2,
                         child: ShadowedButton(
                           onPressed: () {},
-                          child: const Text("シェア"),
+                          style: AppButtonStyles.elevatedSecondaryOnScaffold,
+                          child: const Text("シェアする"),
                         ),
                       ),
                       const Gap(16),
@@ -57,7 +64,8 @@ class HomeScreen extends ConsumerWidget {
                         flex: 1,
                         child: ShadowedButton(
                           onPressed: () {},
-                          child: const Text("きろく"),
+                          style: AppButtonStyles.elevatedSecondaryOnScaffold,
+                          child: const Text("記録"),
                         ),
                       ),
                     ],

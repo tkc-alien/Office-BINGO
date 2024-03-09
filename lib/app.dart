@@ -18,11 +18,11 @@ class App extends StatelessWidget {
         useMaterial3: true,
         fontFamily: "NotoSansJP",
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: AppColors.primary,
+          primarySwatch: AppColors.primarySwatch,
         ),
         scaffoldBackgroundColor: AppColors.scaffoldBackground,
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: AppButtonStyles.elevatedPrimary,
+          style: AppButtonStyles.themeStyle,
         ),
       ),
     );

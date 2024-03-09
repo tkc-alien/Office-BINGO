@@ -6,10 +6,12 @@ class ShadowedButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.child,
+    this.style,
   });
 
-  final Function() onPressed;
+  final void Function()? onPressed;
   final Widget child;
+  final ButtonStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class ShadowedButton extends StatelessWidget {
       ),
       child: ElevatedButton(
         onPressed: onPressed,
+        style: style,
         child: child,
       ),
     );
