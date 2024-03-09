@@ -29,10 +29,10 @@ extension AsyncValueExt<T> on AsyncValue<T> {
     switch (error.runtimeType) {
       // FirebaseAuthエラー
       case FirebaseAuthException:
-        return const ExceptionDisplayDTO(message: "ログインに失敗しました。時間をおいて再度お試しください。");
+        return const ExceptionDisplayDTO(message: "ログインに失敗しました。\n時間をおいて再度お試しください。");
       // 想定されない型
       default:
-        return const ExceptionDisplayDTO(message: "不明なエラーが発生しました。アプリの再起動をお試しください。");
+        return const ExceptionDisplayDTO(message: "不明なエラーが発生しました。\nアプリの再起動をお試しください。");
     }
   }
 }
