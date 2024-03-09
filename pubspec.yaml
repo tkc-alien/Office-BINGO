@@ -47,3 +47,17 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    # デフォルトフォント
+    - family: NotoSansJP
+      fonts:
+        - asset: asset/font/Noto_Sans_JP/static/NotoSansJP-Regular.ttf
+          weight: 400
+        - asset: asset/font/Noto_Sans_JP/static/NotoSansJP-Bold.ttf
+          weight: 700
+    # 抽選番号用のフォント
+    - family: JosefinSans
+      fonts:
+        - asset: asset/font/Josefin_Sans/static/JosefinSans-Italic.ttf
+          style: italic
+          weight: 400
