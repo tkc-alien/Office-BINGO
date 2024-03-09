@@ -10,12 +10,12 @@ BingoSheetRepository bingoSheetRepository(BingoSheetRepositoryRef ref) {
 }
 
 abstract class BingoSheetRepository {
-  Stream<BingoSheetEntity> getCurrentSheet();
+  Stream<BingoSheetEntity> getCurrent();
 }
 
 class BingoSheetRepositoryImpl implements BingoSheetRepository {
   @override
-  Stream<BingoSheetEntity> getCurrentSheet() {
+  Stream<BingoSheetEntity> getCurrent() {
     // TODO: implement getCurrentSheet
     throw UnimplementedError();
   }
@@ -23,17 +23,17 @@ class BingoSheetRepositoryImpl implements BingoSheetRepository {
 
 class BingoSheetRepositoryMock implements BingoSheetRepository {
   @override
-  Stream<BingoSheetEntity> getCurrentSheet() {
+  Stream<BingoSheetEntity> getCurrent() {
     return Stream.value(
       BingoSheetEntity(
         sheet: List.generate(
           25,
           (index) => LotteryNumberEntity(
             number: index + 1,
-            gotAt: null,
+            gotAt: index % 5 == 0 ? DateTime(2024) : null,
           ),
         ),
-        createdAt: DateTime(2024, 1, 1),
+        createdAt: DateTime(2024),
       ),
     );
   }
