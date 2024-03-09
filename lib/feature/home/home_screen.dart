@@ -5,6 +5,7 @@ import 'package:office_bingo/common/component/shadowed_button.dart';
 import 'package:office_bingo/const/view/app_button_styles.dart';
 import 'package:office_bingo/feature/home/component/bingo_sheet_view.dart';
 import 'package:office_bingo/feature/home/component/current_user_view.dart';
+import 'package:office_bingo/routes.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -44,7 +45,7 @@ class HomeScreen extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   ShadowedButton(
-                    onPressed: () {},
+                    onPressed: () => onPressedLottery(context),
                     style: AppButtonStyles.elevatedPrimaryOnScaffold,
                     child: const Text("抽選する"),
                   ),
@@ -77,5 +78,10 @@ class HomeScreen extends ConsumerWidget {
         ),
       ),
     );
+  }
+
+  /// 抽選ボタンのハンドラ
+  void onPressedLottery(BuildContext context) async {
+    await LotteryRoute().push(context);
   }
 }
