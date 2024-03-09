@@ -27,7 +27,7 @@ class BingoSheetView extends ConsumerWidget {
         decoration: const BoxDecoration(
           border: Border.fromBorderSide(
             BorderSide(
-              color: AppColors.primary,
+              color: AppColors.componentFrame,
               width: 6,
             ),
           ),

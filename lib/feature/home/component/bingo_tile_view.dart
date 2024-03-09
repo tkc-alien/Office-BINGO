@@ -31,7 +31,7 @@ class BingoTileView extends ConsumerWidget {
           color: model.backgroundColor,
           border: const Border.fromBorderSide(
             BorderSide(
-              color: AppColors.primary,
+              color: AppColors.componentFrame,
             ),
           ),
         ),
