@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
 import "package:office_bingo/const/view/app_button_styles.dart";
 import "package:office_bingo/const/view/app_colors.dart";
+import "package:office_bingo/const/view/app_text_styles.dart";
 import "package:office_bingo/routes.dart";
 
 final _routerConfig = GoRouter(routes: $appRoutes);
@@ -17,6 +18,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: "NotoSansJP",
+        textTheme: AppTextStyles.theme,
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: AppColors.primarySwatch,
         ),
