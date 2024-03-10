@@ -28,7 +28,7 @@ class ContentView extends ConsumerWidget {
             const Gap(8),
             Text(
               dto.message,
-              style: AppTextStyles.secondary,
+              style: AppTextStyles.bodyMedium,
             ),
           ],
         ),

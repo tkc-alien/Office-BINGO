@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:office_bingo/const/view/app_colors.dart';
+import 'package:office_bingo/const/view/app_text_styles.dart';
 
 const _kButtonHeight = 60.0;
 
 class AppButtonStyles {
   static final themeStyle = ElevatedButton.styleFrom(
     shadowColor: Colors.transparent,
+    textStyle: AppTextStyles.labelLarge,
     fixedSize: const Size.fromHeight(_kButtonHeight),
-    textStyle: const TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 18,
-      // fontWeight: FontWeight.bold,
-    ),
   );
 
   static final elevatedPrimary = ElevatedButton.styleFrom(

@@ -27,46 +27,42 @@ class UserView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Row(
-      children: [
-        AspectRatio(
-          aspectRatio: 1,
-          child: ClipOval(
-            child: CachedNetworkImage(
-              imageUrl: user.avatar,
-              fit: BoxFit.cover,
+    return SizedBox(
+      height: 48,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 1,
+            child: ClipOval(
+              child: CachedNetworkImage(
+                imageUrl: user.avatar,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-        const Gap(8),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                flex: 5,
-                child: FittedBox(child: Text(user.name)),
-              ),
-              Expanded(
-                flex: 4,
-                child: FittedBox(
-                  child: DefaultTextStyle(
-                    style: AppTextStyles.secondary,
-                    child: Row(
-                      children: [
-                        const Text("SHEET "),
-                        Text("${user.sheetCount}"),
-                        const Text(" ／ BINGO "),
-                        Text("${user.bingoCount}"),
-                      ],
-                    ),
-                  ),
+          const Gap(8),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  user.name,
+                  style: AppTextStyles.titleMedium,
                 ),
-              ),
-            ],
+                Row(
+                  children: [
+                    const Text("SHEET "),
+                    Text("${user.sheetCount}"),
+                    const Text(" ／ BINGO "),
+                    Text("${user.bingoCount}"),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
