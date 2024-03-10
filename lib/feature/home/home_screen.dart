@@ -22,20 +22,17 @@ class HomeScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(
-                height: 60,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Expanded(child: CurrentUserView()),
-                    const Gap(16),
-                    ShadowedButton(
-                      onPressed: () {},
-                      style: AppButtonStyles.elevatedPrimaryOnScaffold,
-                      child: const Icon(Icons.settings),
-                    ),
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Expanded(child: CurrentUserView()),
+                  const Gap(16),
+                  ShadowedButton(
+                    onPressed: () {},
+                    style: AppButtonStyles.elevatedPrimaryOnScaffold,
+                    child: const Icon(Icons.settings),
+                  ),
+                ],
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 16),
